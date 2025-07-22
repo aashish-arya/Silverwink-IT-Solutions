@@ -1,6 +1,7 @@
 import React from 'react';
 import loginbackground from '../assets/loginbackground4.jpg';
 import { useForm } from 'react-hook-form';
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
     const {
@@ -66,12 +67,13 @@ const Login = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <button
+                    <NavLink to={'/dashboard'}> <button
                         type="submit"
                         className="w-full bg-[#f0b249] hover:bg-black text-black hover:text-white transition-all duration-300 py-3 rounded-lg font-semibold"
                     >
                         Login
                     </button>
+                    </NavLink>
 
                     {/* Signup Option */}
                     <p className="text-center text-white text-sm pt-3">
