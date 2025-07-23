@@ -1,13 +1,11 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
 import DashboardNav from '../components/DashboardNav';
 import DashboardSidebar from '../components/DashboardSidebar';
-import PageWrapper from '../components/PageWrapper.jsx'
 const Dashboard = () => {
 
 
     return (
         <div>
-            <PageWrapper>
                 <DashboardNav />
                 <div className=" h-[calc(100vh-64px)] flex">
                     <DashboardSidebar />
@@ -15,9 +13,6 @@ const Dashboard = () => {
                         <Outlet />
                     </div>
                 </div>
-
-
-            </PageWrapper>
         </div>
     );
 };

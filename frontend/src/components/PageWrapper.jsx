@@ -1,29 +1,29 @@
 import { motion } from "framer-motion";
 
 const transition = {
-    duration: 0.8,
-    ease: [0.25, 1, 0.5, 1], // iOS-like smooth
+    duration: 0.3, // faster animation
+    ease: [0.25, 1, 0.5, 1],
 };
 
 const variants = {
     initial: {
         opacity: 0,
-        filter: "blur(60px)",
+        filter: "blur(50px)",
     },
     in: {
         opacity: 1,
         filter: "blur(0px)",
         transition: {
             ...transition,
-            delay: 0.1, // smooth suspense entry
+            delay: 0.05, // faster entry
         },
     },
     out: {
         opacity: 0,
-        filter: "blur(30px)",
+        filter: "blur(10px)",
         transition: {
             ...transition,
-            duration: 0.5,
+            duration: 0.1, // quick exit
         },
     },
 };

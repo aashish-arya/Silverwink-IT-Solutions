@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 import Home from './pages/Home';
 import Loginpage from './pages/Loginpage.jsx';
@@ -16,7 +16,7 @@ import Payroll from './pages/Payroll.jsx';
 
 
 const App = () => {
-
+  const location = useLocation();
   return (
 
     <div className=' overflow-hidden'>

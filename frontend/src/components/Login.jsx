@@ -16,13 +16,13 @@ const Login = () => {
 
     return (
         <div
-            className="min-h-[87vh] w-full bg-cover bg-center bg-no-repeat overflow-hidden "
+            className="h-[93.3vh]  w-full bg-cover bg-center bg-no-repeat overflow-hidden "
             style={{ backgroundImage: `url(${loginbackground})` }}
         >
-            <div className="h-full w-full flex justify-center items-start md:items-center pt-12 pb-4 px-4">
+            <div className="h-full w-full  flex justify-center items-center md:items-center  pb-4 px-4">
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className="backdrop-blur-md bg-white/20 border border-white/30 px-6 sm:px-8 md:px-10 lg:px-12 py-10 sm:py-12 md:py-14 lg:py-16 rounded-2xl w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl shadow-xl text-black space-y-6"
+                    className="backdrop-blur-md bg-white/20 border border-white/30 px-6 sm:px-8 md:px-12 lg:px-16 py-24 sm:py-20 md:py-20 lg:py-16 rounded-2xl w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl shadow-xl text-black space-y-6"
                 >
                     <h2 className="text-3xl sm:text-4xl font-bold text-center text-white">Login</h2>
 

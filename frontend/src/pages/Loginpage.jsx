@@ -5,7 +5,7 @@ import PageWrapper from '../components/PageWrapper.jsx'
 const Loginpage = () => {
     return (
         <PageWrapper>
-            <div>
+            <div className='max-h-screen'>
                 <Navbar />
                 <Login />
             </div>
