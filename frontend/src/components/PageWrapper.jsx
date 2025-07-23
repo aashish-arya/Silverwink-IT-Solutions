@@ -31,7 +31,7 @@ const variants = {
 export default function PageWrapper({ children }) {
     return (
         <motion.div
-            className="min-h-screen w-screen bg-white"
+            className="min-h-screen bg-white"
             initial="initial"
             animate="in"
             exit="out"

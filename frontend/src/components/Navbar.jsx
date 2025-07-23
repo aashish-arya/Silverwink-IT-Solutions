@@ -17,7 +17,7 @@ const Navbar = () => {
                 setNav(true)
                 // alert('scrolled more than 60')
             }
-            else{
+            else {
                 setNav(false)
             }
         };
