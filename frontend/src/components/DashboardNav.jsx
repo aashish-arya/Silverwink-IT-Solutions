@@ -47,7 +47,7 @@ const DashboardNav = () => {
                                 Search
                             </button>
                         </form>
-                        <div className='flex justify-cente  items-center gap-7'>
+                        <div className='flex  items-center gap-7'>
                             <div className="text-gray-600 hover:text-yellow-500 transition-colors duration-200 cursor-pointer">
                                 <IoMdNotifications size={30} />
                             </div>
@@ -56,7 +56,7 @@ const DashboardNav = () => {
                             <div className="text-gray-600 hover:text-yellow-500 transition-colors duration-200 cursor-pointer">
                                 <FaUserAlt size={24} />
                             </div>
-                            
+
                         </div>
                     </div>
                 </nav>
