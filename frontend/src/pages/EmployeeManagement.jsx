@@ -2,6 +2,7 @@ import React from 'react'
 import PageWrapper from '../components/PageWrapper.jsx'
 import NavMenu from '../components/NavMenu.jsx'
 import { Outlet } from 'react-router-dom';
+import dashboardbackground from '../assets/dashboardbackground.jpg'
 const navItems = [
   { name: "All Employees", path: "all" },
   { name: "Add New Employee", path: "add" },
@@ -12,8 +13,8 @@ const navItems = [
 const EmployeeManagement = () => {
   return (
     <PageWrapper>
-      <div>
-        <div className='bg-gray-500 w-full h-[200vh] py-4 px-10'>
+      <div className='bg-cover bg-center' style={{ backgroundImage: `url(${dashboardbackground})` }}>
+        <div className=' w-full h-[200vh] py-4 px-10'>
           <NavMenu items={navItems} />
           <div className='h-full'>
             <Outlet />

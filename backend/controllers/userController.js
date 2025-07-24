@@ -6,16 +6,18 @@ const userlogin = async (req, res) => {
         const { email, password } = req.body;
         const user = await userModel.findOne({ email })
         if (!user) {
-            return res.send('Invalid email')
+            return res.status(401).json({ success: false, message: "Invalid email or password" })
         }
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.send("Invalid password")
+            return res.status(401).json({ success: false, message: "Invalid username or password" })
         }
-        const token = jwt.sign({ id: user_id, email: user.email }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' })
+        const token = jwt.sign({ id: user._id, email: user.email }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' })
         res.cookie('token', token);
+        res.json({ success: true, token })
     } catch (error) {
         console.log(error.message)
+        res.status(500).json({ success: false, message: 'Server Error' })
     }
 }
 

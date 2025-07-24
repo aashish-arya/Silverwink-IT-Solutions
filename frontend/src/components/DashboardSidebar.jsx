@@ -52,8 +52,8 @@ const DashboardSidebar = () => {
 
             {/* Sidebar */}
             <div
-                className={`bg-gray-200 border-r text-black bg-cover  fixed md:static top-16 right-0 z-40 h-[calc(100vh-64px)] sm:w-[50%] md:w-[30%] xl:w-[20%] transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"} md:translate-x-0`}
-            // style={{ backgroundImage: `url(${sidebackground}) ` }}
+                className={`bg-gray-200 border-r text-white bg-cover  fixed md:static top-16 right-0 z-40 h-[calc(100vh-64px)] sm:w-[50%] md:w-[30%] xl:w-[20%] transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"} md:translate-x-0`}
+            style={{ backgroundImage: `url(${sidebackground}) ` }}
 
             >
                 <ul className="flex flex-col justify-start space-y-3 md:space-y-6 pt-0 md:pt-5 px-4 mt-10 md:mt-0">
