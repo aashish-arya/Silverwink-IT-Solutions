@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 const sidebarLinks = [
 
-    { to: "main", label: "Dashboard", icon: <MdDashboard /> },
+    { to: "", label: "Dashboard", icon: <MdDashboard /> },
     { to: "employee", label: "Employee Management", icon: <FaUsers /> },
     { to: "payroll", label: "Payroll & Finance", icon: <MdPayments /> },
     { to: "recuritment", label: "Recruitment", icon: <MdWork /> },

@@ -31,14 +31,13 @@ const App = () => {
           <Route path='/login' element={<Loginpage />} />
           <Route path='/dashboard' element={<Dashboard />} >
             <Route index element={<DashboardHero />} />
-            <Route path="main" element={<DashboardHero />} >
-              <Route path='all' element={<AllEmployees />} />
-              <Route path='add' element={<AddEmployee />} />
-              <Route path='department' element={<Department />} />
-              <Route path='attendance' element={<Attendance />} />
-              <Route path='leave' element={<Leave />} />
+            <Route path="employee" element={<EmployeeManagement />}>
+              <Route  path='all' element={<AllEmployees />} />
+              <Route path="add" element={<AddEmployee />} />
+              <Route path="department" element={<Department />} />
+              <Route path="attendance" element={<Attendance />} />
+              <Route path="leave" element={<Leave />} />
             </Route>
-            <Route path="employee" element={<EmployeeManagement />} />
             <Route path="payroll" element={<Payroll />} />
             <Route path="recuritment" element={<Recruitment />} />
             <Route path="events" element={<Events />} />
