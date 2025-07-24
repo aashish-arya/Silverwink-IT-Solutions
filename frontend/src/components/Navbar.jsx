@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { TiSocialFacebook } from "react-icons/ti";
 import { RiTwitterXFill } from "react-icons/ri";
 import { IoLogoInstagram } from "react-icons/io";
@@ -51,11 +51,13 @@ const Navbar = () => {
             <hr />
             <nav className={`flex bg-white mx-auto max-w-screen h-15 px-5 lg:px-10 xl:px-26 py-1  gap-4 md:justify-between justify-between items-center ${nav ? "fixed top-0 w-full z-30 transition-all ease-in duration-700" : " "}`}>
                 <div className='flex justify-center items-center md:gap-1 gap-5'>
-                    <img width={50} className='cursor-pointer' src={sitelogo} alt="" />
-                    <div className='flex flex-col justify-center cursor-pointer items-center'>
-                        <h1 className='text-[#f0b249] text-sm sm:text-md lg:text-xl'>SILVERWINK</h1>
-                        <p className='sm:text-[12px] text-[9px]'>IT SOLUTIONS</p>
-                    </div>
+                    <Link to={'/'} > <img width={50} className='cursor-pointer' src={sitelogo} alt="" /></Link>
+                    <Link to={'/'} >
+                        <div className='flex flex-col justify-center cursor-pointer items-center'>
+                            <h1 className='text-[#f0b249] text-sm sm:text-md lg:text-xl'>SILVERWINK</h1>
+                            <p className='sm:text-[12px] text-[9px]'>IT SOLUTIONS</p>
+                        </div>
+                    </Link>
                 </div>
                 <ul className='gap-5 hidden md:flex '>
                     <div className='group relative'>
