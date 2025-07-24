@@ -8,15 +8,16 @@ import { MdClose } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 
 const sidebarLinks = [
-    { to: "/dashboard/main", label: "Dashboard", icon: <MdDashboard /> },
-    { to: "/dashboard/employee", label: "Employee Management", icon: <FaUsers /> },
-    { to: "/dashboard/payroll", label: "Payroll & Finance", icon: <MdPayments /> },
-    { to: "/dashboard/recuritment", label: "Recruitment", icon: <MdWork /> },
-    { to: "/dashboard/events", label: "Events & HR Timeline", icon: <FaCalendarAlt /> },
-    { to: "/dashboard/letter", label: "Letters & Documents", icon: <FaFileAlt /> },
-    { to: "/dashboard/reports", label: "Reports & Analytics", icon: <FaChartBar /> },
-    { to: "/dashboard/setting", label: "Settings", icon: <IoMdSettings /> },
-    { to: "/dashboard/myaccount", label: "My Account", icon: <FaUserCircle /> },
+
+    { to: "main", label: "Dashboard", icon: <MdDashboard /> },
+    { to: "employee", label: "Employee Management", icon: <FaUsers /> },
+    { to: "payroll", label: "Payroll & Finance", icon: <MdPayments /> },
+    { to: "recuritment", label: "Recruitment", icon: <MdWork /> },
+    { to: "events", label: "Events & HR Timeline", icon: <FaCalendarAlt /> },
+    { to: "letter", label: "Letters & Documents", icon: <FaFileAlt /> },
+    { to: "reports", label: "Reports & Analytics", icon: <FaChartBar /> },
+    { to: "setting", label: "Settings", icon: <IoMdSettings /> },
+    { to: "myaccount", label: "My Account", icon: <FaUserCircle /> },
 ];
 
 

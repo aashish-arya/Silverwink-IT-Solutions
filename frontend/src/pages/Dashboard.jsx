@@ -6,13 +6,13 @@ const Dashboard = () => {
 
     return (
         <div>
-                <DashboardNav />
-                <div className=" h-[calc(100vh-64px)] flex">
-                    <DashboardSidebar />
-                    <div className="flex-1 overflow-y-auto bg-gray-100 p-">
-                        <Outlet />
-                    </div>
+            <DashboardNav />
+            <div className=" h-[calc(100vh-64px)] flex">
+                <DashboardSidebar />
+                <div className="flex-1 overflow-y-auto bg-gray-100 p-">
+                    <Outlet />
                 </div>
+            </div>
         </div>
     );
 };

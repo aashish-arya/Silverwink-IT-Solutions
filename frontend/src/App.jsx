@@ -13,6 +13,11 @@ import Setting from './pages/Setting.jsx'
 import Myaccount from './pages/Myaccount.jsx'
 
 import Payroll from './pages/Payroll.jsx';
+import AllEmployees from './pages/AllEmployees.jsx';
+import AddEmployee from './pages/AddEmployee.jsx';
+import Department from './pages/Department.jsx';
+import Attendance from './pages/Attendance.jsx';
+import Leave from './pages/Leave.jsx';
 
 
 const App = () => {
@@ -26,7 +31,13 @@ const App = () => {
           <Route path='/login' element={<Loginpage />} />
           <Route path='/dashboard' element={<Dashboard />} >
             <Route index element={<DashboardHero />} />
-            <Route path="main" element={<DashboardHero />} />
+            <Route path="main" element={<DashboardHero />} >
+              <Route path='all' element={<AllEmployees />} />
+              <Route path='add' element={<AddEmployee />} />
+              <Route path='department' element={<Department />} />
+              <Route path='attendance' element={<Attendance />} />
+              <Route path='leave' element={<Leave />} />
+            </Route>
             <Route path="employee" element={<EmployeeManagement />} />
             <Route path="payroll" element={<Payroll />} />
             <Route path="recuritment" element={<Recruitment />} />
@@ -36,6 +47,7 @@ const App = () => {
             <Route path="setting" element={<Setting />} />
             <Route path="myaccount" element={<Myaccount />} />
           </Route>
+
         </Routes>
       </AnimatePresence>
     </div>

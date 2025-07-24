@@ -6,7 +6,7 @@ const EmployeeManagement = () => {
       <div>
         <div className='bg-gray-500 w-full h-[200vh] py-4 px-10'>
           <nav className='text-white'>
-            <ul d>
+            <ul >
               <li>All Employees</li>
               <li>Add New Employee</li>
               <li>Departments</li>
