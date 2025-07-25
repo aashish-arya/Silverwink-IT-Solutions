@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 const userlogin = async (req, res) => {
     try {
         const { email, password } = req.body;
-        const user = await userModel.findOne({ email })
+        const user = await userModel.findOne({ email: email.toLowerCase() });
         if (!user) {
             return res.status(401).json({ success: false, message: "Invalid email or password" })
         }
@@ -14,7 +14,7 @@ const userlogin = async (req, res) => {
         }
         const token = jwt.sign({ id: user._id, email: user.email }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' })
         res.cookie('token', token);
-        res.json({ success: true, token })
+        res.status(200).json({ success: true, token, message: "You have logged in successfully" })
     } catch (error) {
         console.log(error.message)
         res.status(500).json({ success: false, message: 'Server Error' })
@@ -29,10 +29,9 @@ const userSignUp = async (req, res) => {
             return res.send('user already exist')
         }
         const salt = await bcrypt.genSalt(10);
-        const hashedpass = await bcrypt.hash(password, salt)
-        res.send(hashedpass)
+        const hashedpass = await bcrypt.hash(password, salt);
         const createdUser = await userModel.create({
-            email,
+            email: email.toLowerCase(),
             name,
             password: hashedpass
         })

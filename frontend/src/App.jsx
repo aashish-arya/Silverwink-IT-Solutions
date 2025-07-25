@@ -18,7 +18,7 @@ import AddEmployee from './pages/AddEmployee.jsx';
 import Department from './pages/Department.jsx';
 import Attendance from './pages/Attendance.jsx';
 import Leave from './pages/Leave.jsx';
-
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 
 const App = () => {
   const location = useLocation();
@@ -29,7 +29,8 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path='/login' element={<Loginpage />} />
-          <Route path='/dashboard' element={<Dashboard />} >
+          <Route path="/dashboard" element={<ProtectedRoute> <Dashboard /> </ProtectedRoute>}
+          >
             <Route index element={<DashboardHero />} />
             <Route path="employee" element={<EmployeeManagement />}>
               <Route index element={<AllEmployees />} />

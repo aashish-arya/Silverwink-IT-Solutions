@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import loginbackground from '../assets/loginbackground4.jpg';
 import { useForm } from 'react-hook-form';
-import { NavLink } from 'react-router-dom';
-
+import { data, NavLink } from 'react-router-dom';
+import { AppContext } from '../contexts/AppContextProvider.jsx';
+import axios from 'axios'
+import { useContext } from 'react';
 const Login = () => {
+    const { login, token, navigate,logout } = useContext(AppContext);
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        reset,
+        formState: { errors, isSubmitting },
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Login Form Data:", data);
+    const onSubmit = async (data) => {
+        try {
+            login(data)
+            reset();
+        } catch (error) {
+            console.log(error.message)
+        }
     };
+    useEffect(() => {
+        logout
+    }, [token]);
 
     return (
         <div
@@ -40,6 +52,7 @@ const Login = () => {
                             })}
                             className="bg-white/40 border border-white/30 px-4 py-3 rounded-lg text-black placeholder-gray-700 outline-none"
                             placeholder="Enter Email"
+                            autoComplete="username"
                         />
                         {errors.email && (
                             <p className="text-red-600 text-sm mt-1">
@@ -58,6 +71,7 @@ const Login = () => {
                             })}
                             className="bg-white/40 border border-white/30 px-4 py-3 rounded-lg text-black placeholder-gray-700 outline-none"
                             placeholder="Enter password"
+                            autoComplete="current-password"
                         />
                         {errors.password && (
                             <p className="text-red-600 text-sm mt-1">
@@ -67,14 +81,13 @@ const Login = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <NavLink to={'/dashboard'}> <button
+                    <button
+                        disabled={isSubmitting}
                         type="submit"
-                        className="w-full bg-[#f0b249] hover:bg-black text-black hover:text-white transition-all duration-300 py-3 rounded-lg font-semibold"
+                        className="w-full bg-[#f0b249] hover:bg-black disabled:cursor-not-allowed text-black hover:text-white transition-all duration-300 py-3 rounded-lg font-semibold"
                     >
-                        Login
+                        {isSubmitting ? 'Loggin in...' : "Login"}
                     </button>
-                    </NavLink>
-
                     {/* Signup Option */}
                     <p className="text-center text-white text-sm pt-3">
                         Don't have an account?{" "}

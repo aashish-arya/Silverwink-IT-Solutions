@@ -11,7 +11,7 @@ const DashboardNav = () => {
     };
     return (
         <div>
-            <div className="w-full h-16 border-b">
+            <div className="w-full h-16 border-b pr-14 md:px-0">
                 <nav className="flex  items-center justify-between mx-auto max-w-screen-xl px-4 py-1 sm:px-6 lg:px-10">
                     {/* Logo section */}
                     <div className="flex justify-center items-center gap-3">
@@ -30,7 +30,7 @@ const DashboardNav = () => {
                     </div>
 
 
-                    <div className="flex  justify-center items-center gap-3 sm:gap-6 sm:w-auto">
+                    <div className="flex  justify-center  items-center gap-3 sm:gap-6 sm:w-auto">
                         {/* Search Box */}
                         <form onSubmit={handleSearch} className="hidden sm:flex w-full sm:w-auto">
                             <input
@@ -47,7 +47,7 @@ const DashboardNav = () => {
                                 Search
                             </button>
                         </form>
-                        <div className='flex  items-center gap-7'>
+                        <div className='flex items-center gap-4 md:gap-7'>
                             <div className="text-gray-600 hover:text-yellow-500 transition-colors duration-200 cursor-pointer">
                                 <IoMdNotifications size={30} />
                             </div>

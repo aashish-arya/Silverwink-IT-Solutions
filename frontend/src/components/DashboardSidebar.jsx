@@ -35,15 +35,15 @@ const DashboardSidebar = () => {
                         }}
                         className="text-2xl text-orange-500 bg-white p-2 rounded shadow"
                     >
-                        <MdClose />
+                        <MdClose size={18} />
                     </button> :
                     <button
                         onClick={() => {
                             setOpen(!open)
                         }}
-                        className="text-2xl text-orange-500 bg-white p-2 rounded shadow"
+                        className="text-2xl text-orange-500 bg-white p-2 rounded border"
                     >
-                        <FiMenu />
+                        <FiMenu size={18} />
 
                     </button>
                 }
