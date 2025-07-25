@@ -5,7 +5,7 @@ const EmployeeCard = ({ emp }) => {
     return (
         <ScrollReveal delay={0.1}>
             <div
-                className="bg-opacity-20 backdrop-blur-lg rounded-xl shadow p-4 hover:shadow-lg transition cursor-pointer"
+                className="bg-[#242c40] rounded-xl shadow p-4 hover:shadow-lg transition cursor-pointer"
             >
                 <img
                     src={emp.image}

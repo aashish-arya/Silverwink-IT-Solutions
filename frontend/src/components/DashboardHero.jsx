@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 const DashboardHero = () => {
   return (
     <PageWrapper>
-      <div className='bg-gray-500 w-full h-[200vh] py-4 px-10'>
+      <div className='w-full bg-[#141b2d] h-[200vh] py-4 px-10'>
         This is Dashboard
         <br />
         graphs\<br />

@@ -23,8 +23,8 @@ const NavMenu = ({ items = [] }) => {
     return (
         <>
             {/* 📱 Mobile Navbar */}
-            <div className="lg:hidden flex justify-between rounded-2xl items-center w-[90%] mx-auto px-4 py-3 bg-slate-800 text-white shadow-md relative">
-                <h1 className="text-xl font-bold">Menu</h1>
+            <div className="lg:hidden flex justify-between rounded-2xl  items-center w-[90%] mx-auto px-4 py-3  text-white shadow-md relative">
+                <h1 className="text-xl tracking-wide font-semibold">Menu</h1>
                 <button onClick={() => setOpen(prev => !prev)} aria-label="Toggle Menu">
                     {open ? <IoMdClose size={24} /> : <FiMenu size={24} />}
                 </button>
@@ -32,7 +32,7 @@ const NavMenu = ({ items = [] }) => {
                 {/* ⬇️ Animated Dropdown Menu */}
                 <div
                     ref={menuRef}
-                    className={`absolute top-full right-4 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg z-50 overflow-hidden transition-all duration-300 ease-out origin-top-right transform
+                    className={`absolute top-full right-4 mt-2 w-56  border border-slate-700 bg-slate-950 rounded-lg shadow-lg z-50 overflow-hidden transition-all duration-300 ease-out origin-top-right transform
                     ${open ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}
                     `}
                 >
@@ -57,7 +57,7 @@ const NavMenu = ({ items = [] }) => {
             </div>
 
             {/* 💻 Desktop Navbar */}
-            <nav className="hidden lg:block bg-slate-800 text-white p-3 rounded-md w-full shadow-sm">
+            <nav className="hidden lg:block  text-white p-3 rounded-md w-full shadow-sm">
                 <ul className="flex flex-wrap items-center justify-evenly gap-4">
                     {items.map((item, index) => (
                         <li key={index}>

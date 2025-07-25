@@ -13,8 +13,8 @@ const navItems = [
 const EmployeeManagement = () => {
   return (
     <PageWrapper>
-      <div className='bg-cover bg-center' style={{ backgroundImage: `url(${dashboardbackground})` }}>
-        <div className=' w-full h-[200vh] py-4 px-10'>
+      <div >
+        <div className=' w-full bg-[#071026] min-h-screen h-[200vh] py-4 px-10'>
           <NavMenu items={navItems} />
           <div className='h-full'>
             <Outlet />

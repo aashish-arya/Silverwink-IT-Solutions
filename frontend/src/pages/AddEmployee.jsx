@@ -109,7 +109,7 @@ const AddEmployee = () => {
           <button
             type='submit'
             disabled={isSubmitting}
-            className="w-full bg-blue-600 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300"
+            className="w-full bg-zinc-700 hover:cursor-pointer disabled:cursor-not-allowed text-white font-semibold py-2 px-4 rounded-lg hover:bg-black transition-all duration-300"
           >
             {isSubmitting ? 'Adding...' : 'Add Employee'}
           </button>
