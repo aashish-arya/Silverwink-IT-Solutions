@@ -12,21 +12,6 @@ const AppContextProvider = (props) => {
     // Auth token state
     const [token, setToken] = useState(localStorage.getItem("token") || "");
 
-    
-    const login = async (data) => {
-        try {
-            const res = await axios.post(import.meta.env.VITE_BACKEND_URI + "/user/login", data, { withCredentials: true });
-            console.log(res)
-            if (res.data.success) {
-                setToken(res.data.token);
-                localStorage.setItem("token", res.data.token);
-                toast.success(res.data.message);
-                navigate("/dashboard");
-            }
-        } catch (error) {
-            toast.error(error.response.data.message);
-        }
-    };
 
     // Logout function
     const logout = () => {
@@ -39,7 +24,6 @@ const AppContextProvider = (props) => {
     const value = {
         token,
         setToken,
-        login,
         logout,
         navigate,
         // add other state and functions here as needed

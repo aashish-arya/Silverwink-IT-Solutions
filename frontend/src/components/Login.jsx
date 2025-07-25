@@ -5,8 +5,11 @@ import { data, NavLink } from 'react-router-dom';
 import { AppContext } from '../contexts/AppContextProvider.jsx';
 import axios from 'axios'
 import { useContext } from 'react';
+import { toast } from 'sonner';
+
 const Login = () => {
-    const { login, token, navigate,logout } = useContext(AppContext);
+
+    const { token, setToken, navigate, logout } = useContext(AppContext);
     const {
         register,
         handleSubmit,
@@ -16,10 +19,16 @@ const Login = () => {
 
     const onSubmit = async (data) => {
         try {
-            login(data)
-            reset();
+            const res = await axios.post(import.meta.env.VITE_BACKEND_URI + "/user/login", data, { withCredentials: true });
+            if (res.data.success) {
+                setToken(res.data.token);
+                localStorage.setItem("token", res.data.token);
+                toast.success(res.data.message);
+                navigate("/dashboard");
+                reset();
+            }
         } catch (error) {
-            console.log(error.message)
+            toast.error(error.response.data.message);
         }
     };
     useEffect(() => {
