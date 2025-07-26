@@ -5,6 +5,7 @@ dotenv.config()
 import mongoDB from './configs/mongoDB.js';
 import cookieParser from 'cookie-parser';
 import userRoute from './routes/userRoute.js'
+import employeeRoute from './routes/employeeRoute.js'
 const app = express();
 const port = 3000
 const hostname = 'localhost'
@@ -17,7 +18,7 @@ app.use(cors({
     credentials: true
 }));
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.send('This Api is Working');
 })
 app.use(express.json());
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: true }))
 mongoDB();
 
 app.use('/user', userRoute)
+app.use('/employee', employeeRoute)
 
 app.listen(port, () => {
     console.log(`Example app listening on port http://${hostname}:${port}`)

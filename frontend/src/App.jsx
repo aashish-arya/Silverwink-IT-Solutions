@@ -29,9 +29,9 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path='/login' element={<Loginpage />} />
-          <Route path="/dashboard" element={<ProtectedRoute> <Dashboard /> </ProtectedRoute>}
-          >
+          <Route path="/dashboard" element={<ProtectedRoute> <Dashboard /> </ProtectedRoute>}>
             <Route index element={<DashboardHero />} />
+            <Route path='main' element={<DashboardHero />} />
             <Route path="employee" element={<EmployeeManagement />}>
               <Route index element={<AllEmployees />} />
               <Route path="all" element={<AllEmployees />} />

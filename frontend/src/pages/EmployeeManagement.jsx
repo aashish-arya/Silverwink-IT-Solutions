@@ -14,7 +14,7 @@ const EmployeeManagement = () => {
   return (
     <PageWrapper>
       <div >
-        <div className=' w-full bg-[#071026] min-h-screen h-[200vh] py-4 px-10'>
+        <div className=' w-full bg-[#071026] min-h-screen  py-4 px-10'>
           <NavMenu items={navItems} />
           <div className='h-full'>
             <Outlet />
