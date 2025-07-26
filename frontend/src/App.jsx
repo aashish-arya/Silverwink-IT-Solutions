@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Home from './pages/Home';
 import Loginpage from './pages/Loginpage.jsx';
 import Dashboard from './pages/Dashboard.jsx';
-import DashboardHero from './components/DashboardHero.jsx';
+import DashboardHero from './pages/DashboardHero.jsx';
 import EmployeeManagement from './pages/EmployeeManagement.jsx';
 import Recruitment from './pages/Recuritment.jsx'
 import Events from './pages/Events.jsx'
